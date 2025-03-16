@@ -9,7 +9,6 @@ const checkToken = async(req, res, next)=>{
             return res.status(403).json ({ message:"Es necesario incluir el token" })
         }
         // comprobar si el token es correcto
-        //Bearer 
         const tokenString = req.headers["authorization"];
         const token = tokenString.split(" ")[1];
         let data;
